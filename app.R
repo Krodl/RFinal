@@ -8,10 +8,10 @@ library(dplyr)
 ### Import ###
 
 cities.data <- data.frame(read.csv("./data/uscitiestrimmed.csv"))
-
-healthcare.data
-
 income.data <- data.frame(read.csv("./data/kaggle_income.csv"))
+
+#still need data:
+healthcare.data
 crime.data
 taxes.data
 housing.data
@@ -122,10 +122,12 @@ server <- function(input, output) {
   
   ### Calculate scores
   
-  ### Format table
+  
+  ### Format final score table
+  
   
   ### Output
-  output$table <- renderDataTable(cities.data)
+  output$table <- renderDataTable(cities.scores)
 }
 
 # Run the application
