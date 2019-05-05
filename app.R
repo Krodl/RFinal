@@ -20,14 +20,14 @@ civic.data
 college.data
 socialmedia.data
 
-### PREPARE FOR SERVER ###
+### PRE-CALCULATE FOR SERVER ###
 
 final.data <- select(cities.data,city,state_name,county_fips)
 
 #income
 income.data.min <- min(income.data$Mean)
 income.data.max <- max(income.data$Mean)
-income.data <- select(income.data,Zip_Code,Mean)
+income.data <- select(income.data,Zip_Code,MeanIncome=Mean)
 
 #crime
 #taxes
@@ -41,8 +41,9 @@ income.data <- select(income.data,Zip_Code,Mean)
 
 ## Final Preparations (this is the dataframe that is used in the server)
 final.data <- merge(final.data, income.data, by.x="county_fips", by.y="Zip_Code")
+final.score <- final.data
 
-ui <- fluidPage(titlePanel("censusVis"),
+ui <- fluidPage(titlePanel("City Rank"),
                 
                 sidebarLayout(
                   sidebarPanel(
@@ -134,7 +135,8 @@ ui <- fluidPage(titlePanel("censusVis"),
                       min = 0,
                       max = 100,
                       value = 50
-                    )
+                    ),
+                    actionButton("goButton", "Update Table")
                   ),
                   
                   mainPanel(dataTableOutput('table'))
@@ -144,11 +146,22 @@ ui <- fluidPage(titlePanel("censusVis"),
 server <- function(input, output) {
   
   ### Calculate scores
+  vals <- reactiveValues()
   
-    final.data <- reactive({percent_rank(final.data$Mean) * input$income})
-  
-  ### Output
-  output$table <- renderDataTable(final.data)
+  ##Watch for change to input....
+  observe({
+    #income
+    vals$income <- input$income
+    
+  })
+  output$table <- renderDataTable(
+    final.score %>% mutate(
+      #income
+      MeanIncomeScore = percent_rank(final.data$Mean) * vals$income
+      
+      )
+    )
+    
 }
 
 # Run the application
