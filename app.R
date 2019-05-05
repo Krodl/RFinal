@@ -5,31 +5,52 @@ library(graphics)
 library(shiny)
 library(dplyr)
 
-### IMPORT RAW DATA ###
 
+
+################# ------- IMPORT DATA HERE: ------- #################
+
+
+#base city data
 cities.data <- data.frame(read.csv("./data/uscitiestrimmed.csv"))
-income.data <- data.frame(read.csv("./data/kaggle_income.csv"))
-
-healthcare.data <- data.frame(read.csv("./data/")) #still need data
-crime.data
-taxes.data
-housing.data
-food.data #zomato data?
-entertainment.data
-civic.data
-college.data
-socialmedia.data
-
-### PRE-CALCULATE FOR SERVER ###
-
-final.data <- select(cities.data,city,state_name,county_fips)
 
 #income
-income.data.min <- min(income.data$Mean)
-income.data.max <- max(income.data$Mean)
-income.data <- select(income.data,Zip_Code,MeanIncome=Mean)
+income.data <- data.frame(read.csv("./data/kaggle_income.csv"))
+
+#healthcare
+healthcare.data <- data.frame(read.csv("./data/")) #still need data
 
 #crime
+crime.data
+
+#tax rates
+taxes.data
+
+#housing
+housing.data
+
+#food
+food.data #zomato data?
+
+#entertainment
+entertainment.data
+
+#civic
+civic.data
+
+#colleges
+college.data
+
+#social media reception
+socialmedia.data
+
+
+
+### FORMAT DATA FOR FINAL DATAFRAME ###
+
+
+#income
+income.data <- select(income.data,Zip_Code,MeanIncome=Mean)
+
 #taxes
 #housing
 #recreational
@@ -39,9 +60,19 @@ income.data <- select(income.data,Zip_Code,MeanIncome=Mean)
 #college
 #socialmedia
 
-## Final Preparations (this is the dataframe that is used in the server)
+
+
+### Final Preparations ###
+
+
+final.data <- select(cities.data,city,state_name,county_fips)
 final.data <- merge(final.data, income.data, by.x="county_fips", by.y="Zip_Code")
 final.score <- final.data
+
+
+
+### UI ###
+
 
 ui <- fluidPage(titlePanel("City Rank"),
                 
@@ -143,6 +174,11 @@ ui <- fluidPage(titlePanel("City Rank"),
                   
                 ))
 
+
+
+### SERVER ###
+
+
 server <- function(input, output) {
   
   ### Calculate scores
@@ -161,10 +197,13 @@ server <- function(input, output) {
       
       )
     )
-    
 }
 
-# Run the application
+
+
+### Run the application ###
+
+
 shinyApp(ui = ui, server = server)
 
 
