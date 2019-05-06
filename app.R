@@ -5,8 +5,6 @@ library(graphics)
 library(shiny)
 library(dplyr)
 
-
-
 ################# ------- IMPORT DATA HERE: ------- #################
 
 
@@ -47,26 +45,47 @@ socialmedia.data
 
 ### FORMAT DATA FOR FINAL DATAFRAME ###
 
-
 #income
-income.data <- select(income.data,Zip_Code,MeanIncome=Mean)
+income.data <- select(income.data,ZipCode=Zip_Code,MeanIncome=Mean)
 
-#taxes
+#healthcare
+healthcare.data
+
+#crime
+crime.data
+
+#tax rates
+taxes.data
+
 #housing
-#recreational
-#entertainment
+housing.data
+
 #food
+food.data #zomato data?
+
+#entertainment
+entertainment.data
+
 #civic
-#college
-#socialmedia
+civic.data
+
+#colleges
+college.data
+
+#social media reception
+socialmedia.data
 
 
 
 ### Final Preparations ###
 
+#final data table, to be used in server
+final.data <- select(cities.data,City=city,State=state_name,ZipCode=county_fips)
 
-final.data <- select(cities.data,city,state_name,county_fips)
-final.data <- merge(final.data, income.data, by.x="county_fips", by.y="Zip_Code")
+##Merge everything together in to final data table.
+
+#income
+final.data <- merge(final.data, income.data, by.x="ZipCode", by.y="ZipCode")
 final.score <- final.data
 
 
@@ -193,7 +212,8 @@ server <- function(input, output) {
   output$table <- renderDataTable(
     final.score %>% mutate(
       #income
-      MeanIncomeScore = percent_rank(final.data$Mean) * vals$income
+      MeanIncome.Score = percent_rank(final.data$MeanIncome) * vals$income,
+      TotalScore = MeanIncome.Score + MeanIncome.Score
       
       )
     )
