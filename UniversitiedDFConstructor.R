@@ -18,3 +18,4 @@ for(i in universities.df$Name){
   rank <- round((universities.df$Rank[index])/220, 2) # Divide rank by 220 to get percentile between 0 and 1. In this case lower is better.
   universitiesTrimmed.df[nrow(universitiesTrimmed.df) + 1,] = list(university, city, rank)
 }
+write.csv(universitiesTrimmed.df, "universityRanks")
