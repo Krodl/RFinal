@@ -1,0 +1,232 @@
+"","name","city","rank"
+"1","Harvard University","Cambridge",0.01
+"2","University of Chicago","Chicago",0.01
+"3","Yale University","New Haven",0.01
+"4","Columbia University","New York",0.02
+"5","Stanford University","Stanford",0.02
+"6","Massachusetts Institute of Technology","Cambridge",0.03
+"7","Duke University","Durham",0.04
+"8","University of Pennsylvania","Philadelphia",0.04
+"9","Johns Hopkins University","Baltimore",0.05
+"10","Dartmouth College","Hanover",0.05
+"11","California Institute of Technology","Pasadena",0.05
+"12","Northwestern University","Evanston",0.05
+"13","Brown University","Providence",0.06
+"14","Cornell University","Ithaca",0.07
+"15","Rice University","Houston",0.07
+"16","University of Notre Dame","Notre Dame",0.07
+"17","Vanderbilt University","Nashville",0.07
+"18","Washington University in St. Louis","St. Louis",0.09
+"19","Emory University","Atlanta",0.09
+"20","Georgetown University","Washington",0.09
+"21","University of California--Berkeley","Berkeley",0.09
+"22","University of Southern California","Los Angeles",0.1
+"23","Carnegie Mellon University","Pittsburgh",0.11
+"24","University of California--Los Angeles","Los Angeles",0.11
+"25","University of Virginia","Charlottesville",0.11
+"26","Tufts University","Medford",0.12
+"27","University of Michigan--Ann Arbor","Ann Arbor",0.12
+"28","Wake Forest University","Winston-Salem",0.12
+"29","University of North Carolina--Chapel Hill","Chapel Hill",0.14
+"30","Boston College","Chestnut Hill",0.14
+"31","College of William & Mary","Williamsburg",0.15
+"32","University of Rochester","Rochester",0.15
+"33","Brandeis University","Waltham",0.15
+"34","Georgia Institute of Technology","Atlanta",0.15
+"35","New York University","New York",0.16
+"36","Case Western Reserve University","Cleveland",0.17
+"37","University of California--Santa Barbara","Santa Barbara",0.17
+"38","Boston University","Boston",0.18
+"39","Northeastern University","Boston",0.18
+"40","Rensselaer Polytechnic Institute","Troy",0.18
+"41","Tulane University","New Orleans",0.18
+"42","University of California--Irvine","Irvine",0.18
+"43","Lehigh University","Bethlehem",0.2
+"44","University of California--Davis","Davis",0.2
+"45","University of California--San Diego","La Jolla",0.2
+"46","University of Illinois--Urbana-Champaign","Champaign",0.2
+"47","University of Miami","Coral Gables",0.2
+"48","University of Wisconsin--Madison","Madison",0.2
+"49","Pepperdine University","Malibu",0.23
+"50","University of Florida","Gainesville",0.23
+"51","Villanova University","Villanova",0.23
+"52","Pennsylvania State University--University Park","University Park",0.23
+"53","Ohio State University--Columbus","Columbus",0.25
+"54","University of Washington","Seattle",0.25
+"55","George Washington University","Washington",0.25
+"56","Southern Methodist University","Dallas",0.25
+"57","University of Georgia","Athens",0.25
+"58","University of Texas--Austin","Austin",0.25
+"59","Fordham University","New York",0.27
+"60","Purdue University--West Lafayette","West Lafayette",0.27
+"61","Syracuse University","Syracuse",0.27
+"62","University of Connecticut","Storrs",0.27
+"63","University of Maryland--College Park","College Park",0.27
+"64","Worcester Polytechnic Institute","Worcester",0.27
+"65","Clemson University","Clemson",0.3
+"66","Yeshiva University","New York",0.3
+"67","Brigham Young University--Provo","Provo",0.31
+"68","University of Pittsburgh","Pittsburgh",0.31
+"69","Rutgers University--New Brunswick","Piscataway",0.32
+"70","Baylor University","Waco",0.32
+"71","Stevens Institute of Technology","Hoboken",0.32
+"72","University of Minnesota--Twin Cities","Minneapolis",0.32
+"73","American University","Washington",0.34
+"74","Clark University","Worcester",0.34
+"75","Texas A&M University--College Station","College Station",0.34
+"76","University of Massachusetts--Amherst","Amherst",0.34
+"77","Virginia Tech","Blacksburg",0.34
+"78","Miami University--Oxford","Oxford",0.36
+"79","University of California--Santa Cruz","Santa Cruz",0.36
+"80","University of Delaware","Newark",0.36
+"81","Colorado School of Mines","Golden",0.37
+"82","Michigan State University","East Lansing",0.37
+"83","Texas Christian University","Fort Worth",0.37
+"84","University of Iowa","Iowa City",0.37
+"85","Binghamton University--SUNY","Binghamton",0.39
+"86","Indiana University--Bloomington","Bloomington",0.39
+"87","Marquette University","Milwaukee",0.39
+"88","University of Denver","Denver",0.39
+"89","University of San Diego","San Diego",0.39
+"90","University of Tulsa","Tulsa",0.39
+"91","Florida State University","Tallahassee",0.42
+"92","North Carolina State University--Raleigh","Raleigh",0.42
+"93","University of Colorado--Boulder","Boulder",0.42
+"94","University of Vermont","Burlington",0.42
+"95","Drexel University","Philadelphia",0.44
+"96","Saint Louis University","St. Louis",0.44
+"97","Stony Brook University--SUNY","Stony Brook",0.44
+"98","Auburn University","Auburn",0.45
+"99","Loyola University Chicago","Chicago",0.45
+"100","SUNY College of Environmental Science and Forestry","Syracuse",0.45
+"101","University at Buffalo--SUNY","Buffalo",0.45
+"102","Illinois Institute of Technology","Chicago",0.47
+"103","University of Alabama","Tuscaloosa",0.47
+"104","University of Oregon","Eugene",0.47
+"105","University of Tennessee","Knoxville",0.47
+"106","Rochester Institute of Technology","Rochester",0.49
+"107","University of New Hampshire","Durham",0.49
+"108","University of San Francisco","San Francisco",0.49
+"109","University of South Carolina","Columbia",0.49
+"110","Iowa State University","Ames",0.5
+"111","University of Dayton","Dayton",0.5
+"112","University of Missouri","Columbia",0.5
+"113","University of Nebraska--Lincoln","Lincoln",0.5
+"114","University of Oklahoma","Norman",0.5
+"115","University of the Pacific","Stockton",0.5
+"116","University of Utah","Salt Lake City",0.5
+"117","Michigan Technological University","Houghton",0.54
+"118","Seton Hall University","South Orange",0.54
+"119","Temple University","Philadelphia",0.54
+"120","University of California--Riverside","Riverside",0.54
+"121","University of Kansas","Lawrence",0.54
+"122","University of St. Thomas","St. Paul",0.54
+"123","The Catholic University of America","Washington",0.56
+"124","DePaul University","Chicago",0.56
+"125","Duquesne University","Pittsburgh",0.56
+"126","Howard University","Washington",0.56
+"127","University of Arizona","Tucson",0.56
+"128","Arizona State University--Tempe","Tempe",0.59
+"129","Clarkson University","Potsdam",0.59
+"130","Colorado State University","Fort Collins",0.59
+"131","New School","New York",0.59
+"132","Hofstra University","Hempstead",0.6
+"133","University of Kentucky","Lexington",0.6
+"134","Kansas State University","Manhattan",0.61
+"135","Louisiana State University--Baton Rouge","Baton Rouge",0.61
+"136","Mercer University","Macon",0.61
+"137","New Jersey Institute of Technology","Newark",0.61
+"138","Rutgers University--Newark","Newark",0.61
+"139","University of Arkansas","Fayetteville",0.61
+"140","University of Cincinnati","Cincinnati",0.61
+"141","University of Mississippi","University",0.61
+"142","George Mason University","Fairfax",0.65
+"143","Oregon State University","Corvallis",0.65
+"144","Washington State University","Pullman",0.65
+"145","Adelphi University","Garden City",0.66
+"146","Ohio University","Athens",0.66
+"147","San Diego State University","San Diego",0.66
+"148","St. John Fisher College","Rochester",0.66
+"149","University at Albany--SUNY","Albany",0.66
+"150","University of Texas--Dallas","Richardson",0.66
+"151","Illinois State University","Normal",0.69
+"152","Immaculata University","Immaculata",0.69
+"153","Oklahoma State University","Stillwater",0.69
+"154","University of California--Merced","Merced",0.69
+"155","University of Illinois--Chicago","Chicago",0.69
+"156","University of La Verne","La Verne",0.69
+"157","University of Massachusetts--Lowell","Lowell",0.69
+"158","Seattle Pacific University","Seattle",0.72
+"159","University of Alabama--Birmingham","Birmingham",0.72
+"160","University of Maryland--Baltimore County","Baltimore",0.72
+"161","University of Rhode Island","Kingston",0.72
+"162","University of South Florida","Tampa",0.72
+"163","Biola University","La Mirada",0.75
+"164","Maryville University of St. Louis","St Louis",0.75
+"165","Missouri University of Science & Technology","Rolla",0.75
+"166","St. John's University","Queens",0.75
+"167","Virginia Commonwealth University","Richmond",0.75
+"168","Union University","Jackson",0.77
+"169","University of Hawaii--Manoa","Honolulu",0.77
+"170","Edgewood College","Madison",0.78
+"171","Florida Institute of Technology","Melbourne",0.78
+"172","University of Idaho","Moscow",0.78
+"173","University of Louisville","Louisville",0.78
+"174","University of Wyoming","Laramie",0.78
+"175","Ball State University","Muncie",0.8
+"176","Lipscomb University","Nashville",0.8
+"177","Mississippi State University","Mississippi State",0.8
+"178","Montclair State University","Montclair",0.8
+"179","Texas Tech University","Lubbock",0.8
+"180","University of Central Florida","Orlando",0.8
+"181","University of New Mexico","Albuquerque",0.8
+"182","Andrews University","Berrien Springs",0.83
+"183","Azusa Pacific University","Azusa",0.83
+"184","University of Maine","Orono",0.83
+"185","West Virginia University","Morgantown",0.83
+"186","Widener University","Chester",0.83
+"187","Kent State University","Kent",0.85
+"188","North Dakota State University","Fargo",0.85
+"189","Pace University","New York",0.85
+"190","Robert Morris University","Moon Township",0.85
+"191","Suffolk University","Boston",0.85
+"192","University of Hartford","West Hartford",0.85
+"193","Bowling Green State University","Bowling Green",0.88
+"194","University of Houston","Houston",0.88
+"195","Western Michigan University","Kalamazoo",0.88
+"196","Indiana University-Purdue University--Indianapolis","Indianapolis",0.9
+"197","Lesley University","Cambridge",0.9
+"198","University of Alabama--Huntsville","Huntsville",0.9
+"199","University of Colorado--Denver","Denver",0.9
+"200","University of Nevada--Reno","Reno",0.9
+"201","California State University--Fullerton","Fullerton",0.92
+"202","Central Michigan University","Mount Pleasant",0.92
+"203","Louisiana Tech University","Ruston",0.92
+"204","South Dakota State University","Brookings",0.92
+"205","University of Alaska--Fairbanks","Fairbanks",0.92
+"206","University of North Carolina--Charlotte","Charlotte",0.92
+"207","University of North Dakota","Grand Forks",0.92
+"208","University of South Dakota","Vermillion",0.92
+"209","East Carolina University","Greenville",0.95
+"210","Montana State University","Bozeman",0.95
+"211","Old Dominion University","Norfolk",0.95
+"212","University of Missouri--Kansas City","Kansas City",0.95
+"213","Ashland University","Ashland",0.97
+"214","Dallas Baptist University","Dallas",0.97
+"215","Northern Illinois University","DeKalb",0.97
+"216","Nova Southeastern University","Ft. Lauderdale",0.97
+"217","Southern Illinois University--Carbondale","Carbondale",0.97
+"218","University of Montana","Missoula",0.97
+"219","Benedictine University","Lisle",1
+"220","California State University--Fresno","Fresno",1
+"221","Gardner-Webb University","Boiling Springs",1
+"222","New Mexico State University","Las Cruces",1
+"223","Shenandoah University","Winchester",1
+"224","Tennessee Technological University","Cookeville",1
+"225","University of Massachusetts--Boston","Boston",1
+"226","University of Massachusetts--Dartmouth","North Dartmouth",1
+"227","University of Missouri--St. Louis","St. Louis",1
+"228","University of North Carolina--Greensboro","Greensboro",1
+"229","University of Southern Mississippi","Hattiesburg",1
+"230","Utah State University","Logan",1
+"231",NA,NA,NA
