@@ -4,6 +4,9 @@
 library(graphics)
 library(shiny)
 library(dplyr)
+library(ggplot2)
+library(ggmap)
+library("readxl")
 
 ################# ------- IMPORT DATA HERE: ------- #################
 
@@ -15,77 +18,70 @@ cities.data <- data.frame(read.csv("./data/uscitiestrimmed.csv"))
 income.data <- data.frame(read.csv("./data/kaggle_income.csv"))
 
 #healthcare
-healthcare.data <- data.frame(read.csv("./data/")) #still need data
 
 #crime
-crime.data
+crime.data <- data.frame(read.csv("./data/crimeDataWithCity.csv"))
 
 #tax rates
-taxes.data
+taxes.data <- read_xlsx("./data/taxes.xlsx")
 
 #housing
-housing.data
 
 #food
-food.data #zomato data?
 
 #entertainment
-entertainment.data
 
 #civic
-civic.data
 
 #colleges
-college.data
 
 #social media reception
-socialmedia.data
 
 
 
 ### FORMAT DATA FOR FINAL DATAFRAME ###
 
+#final data table, to be used in server
+final.data <- select(cities.data,City=city,State=state_name,County=county_name,ZipCode=county_fips,lat,long=lng)
+
 #income
 income.data <- select(income.data,ZipCode=Zip_Code,MeanIncome=Mean)
 
 #healthcare
-healthcare.data
 
 #crime
-crime.data
+crime.data <- select(crime.data,City=city,Crime=crime_rate_per_100000)
 
 #tax rates
-taxes.data
+taxes.data <- select(taxes.data,State,StateTax=StateTaxData,LocalTax=LocalTaxData)
 
 #housing
-housing.data
 
 #food
-food.data #zomato data?
 
 #entertainment
-entertainment.data
 
 #civic
-civic.data
 
 #colleges
-college.data
 
 #social media reception
-socialmedia.data
 
 
 
 ### Final Preparations ###
 
-#final data table, to be used in server
-final.data <- select(cities.data,City=city,State=state_name,ZipCode=county_fips)
-
 ##Merge everything together in to final data table.
 
 #income
 final.data <- merge(final.data, income.data, by.x="ZipCode", by.y="ZipCode")
+
+#taxes
+final.data <- merge(final.data, taxes.data, by.x="State", by.y="State")
+
+#crime
+final.data <- merge(final.data, crime.data, by.x="City", by.y="City")
+
 final.score <- final.data
 
 
@@ -207,16 +203,19 @@ server <- function(input, output) {
   observe({
     #income
     vals$income <- input$income
+    vals$taxes <- input$taxes
     
   })
+  
+  
   output$table <- renderDataTable(
     final.score %>% mutate(
       #income
-      MeanIncome.Score = percent_rank(final.data$MeanIncome) * vals$income,
-      TotalScore = MeanIncome.Score + MeanIncome.Score
-      
-      )
+      MeanIncome.Score = percent_rank(final.score$MeanIncome) * vals$income,
+      Taxes.Score = percent_rank(final.score$StateTax) * vals$taxes * -1,
+      Total.Score = MeanIncome.Score + Taxes.Score
     )
+  )
 }
 
 
