@@ -30,3 +30,4 @@ for(i in cities$city){
   }
   index <- index + 1
 }
+write.csv(cityMuseumRankings, "MuseumRankings.csv")
